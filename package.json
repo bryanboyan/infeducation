@@ -1,20 +1,21 @@
 {
   "name": "infeducation",
-  "version": "0.09",
-  "description": "",
+  "version": "0.0.9",
+  "description": "Infinity Education website/mobile site.",
+  "engine": {
+    "node": ">=6.9",
+    "npm": ">=3.0"
+  },
   "main": "app.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node app.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bryanboyan/infeducation.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bryanboyan/infeducation/issues"
-  },
   "dependencies": {
     "express": "^4.14.1"
-  }
+  },
+  "license": "UNLICENSED"
 }
