@@ -2,7 +2,7 @@
   "name": "infeducation",
   "version": "0.09",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {},
   "repository": {
     "type": "git",
