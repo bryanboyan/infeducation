@@ -1,9 +1,11 @@
 # Onboarding
+
 ## 安装流程
 * node.js，以下2选1
   * 官网下载: https://nodejs.org/en/
   * 先下载nvm以后方便管理多版本node，https://github.com/creationix/nvm
 * 安装packages: ``cd /path/to/infeducation && npm install``
+
 ## 启动流程
 ```
 > cd /path/to/infeducation
@@ -11,8 +13,8 @@
 v6.9.5
 > node app
 Server started on port 3000!
+// Now you can go to localhost:3000
 ```
-Go to localhost:3000 now
 
 # 资料、资源
 ## node.js
