@@ -1,0 +1,20 @@
+{
+  "name": "infeducation",
+  "version": "0.09",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryanboyan/infeducation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bryanboyan/infeducation/issues"
+  },
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}

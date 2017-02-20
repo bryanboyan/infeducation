@@ -1,0 +1,33 @@
+# Mac OS X hidden files
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+
+# modules
+frontend_modules/
+node_modules/
+# FE Cache Files
+bower_components/
+public/js/main.js
+
+# dummy stuffs
+logs
+*.log
+manifest.yml
+*.csv
+
+# ignore wiki/ folder
+wiki/
+
+# "public/jsreact/" is our browserfy "target" folder
+public/js/react/*
+
+# IDE Cache Files
+.idea/
+
+#vim
+*~
+*.swp
+*.swo
