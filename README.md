@@ -1,4 +1,10 @@
 # Onboarding
+## 安装流程
+* node.js，以下2选1
+  * 官网下载: https://nodejs.org/en/
+  * 先下载nvm以后方便管理多版本node，https://github.com/creationix/nvm
+
+# 资料、资源
 ## node.js
 我们使用最新的成熟版 v6.9，请到 nodejs.org 官网上搜索关于node的API文档稍微熟悉一下。
 ## web 框架
