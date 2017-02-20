@@ -6,9 +6,8 @@
     "node": ">=6.9",
     "npm": ">=3.0"
   },
-  "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
