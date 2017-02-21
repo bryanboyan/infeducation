@@ -1,5 +1,13 @@
 'use strict';
 
+const { renderToString } = require('react-dom/server');
+const Home = require(__www+'/components/home/Home.js');
+
 exports.Home = function(req, res) {
-  res.send('This is the Infinity Education home page!');
+  const markup = renderToString(<Home />);
+
+  res.render('index', {
+    markup: markup,
+    data: {}
+  });
 };

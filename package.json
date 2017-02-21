@@ -13,8 +13,22 @@
     "type": "git",
     "url": "git+https://github.com/bryanboyan/infeducation.git"
   },
-  "dependencies": {
-    "express": "^4.14.1"
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
   },
-  "license": "UNLICENSED"
+  "dependencies": {
+    "babel-register": "^6.23.0",
+    "ejs": "^2.5.6",
+    "express": "^4.14.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0"
+  }
 }
