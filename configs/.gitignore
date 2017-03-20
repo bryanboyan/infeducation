@@ -1,0 +1,4 @@
+# All files in configs/ folder should be ignored and not committed into codebase
+*
+!index.js
+!.gitignore
