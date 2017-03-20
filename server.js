@@ -3,6 +3,9 @@ const express = require('express');
 global.server = express();
 require("babel-register");
 
+// Configs
+global.configs = require('./configs');
+
 // For global require
 global.__server = __dirname + '/server';
 global.__web = __dirname + '/web';
