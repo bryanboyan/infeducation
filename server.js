@@ -2,6 +2,10 @@ const path = require('path');
 const express = require('express');
 global.server = express();
 require("babel-register");
+require('./polyfill');
+
+// Some useful modules
+global._ = require('lodash');
 
 // Configs
 global.configs = require('./configs');
@@ -23,6 +27,7 @@ server.set('view engine', 'ejs');
 const routes = require('./server/routes');
 server.get('/', routes.home.Home);
 
-server.listen(3000, function () {
-  console.log('Server started on port 3000!')
+const serverConf = configs.server;
+server.listen(serverConf.port, function () {
+  console.log('Server started on port {0}!'.format(serverConf.port));
 });
