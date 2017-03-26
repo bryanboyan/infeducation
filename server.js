@@ -15,9 +15,13 @@ global.__server = __dirname + '/server';
 global.__web = __dirname + '/web';
 
 /**
+ * Public resources
+ */
+server.use(express.static(path.join(__dirname, 'public')));
+
+/**
  * Views
  */
-global.React = require('react');
 server.set('views', path.join(__dirname, 'server/views'));
 server.set('view engine', 'ejs');
 
@@ -25,7 +29,8 @@ server.set('view engine', 'ejs');
  * Routes
  */
 const routes = require('./server/routes');
-server.get('/', routes.home.Home);
+server.get('/', routes.home);
+server.get('/about', routes.about);
 
 const serverConf = configs.server;
 server.listen(serverConf.port, function () {

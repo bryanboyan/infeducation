@@ -1,5 +1,3 @@
-'use strict';
-
 const request = require('request');
 
 exports.fetchAccessToken = new Promise((resolve, reject) => {

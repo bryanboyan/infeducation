@@ -1,5 +1,3 @@
-const React = require('react');
-
 const Home = (props) => (
   <div style={{"backgroundColor": "blue", "color": "red"}}>
     <div>

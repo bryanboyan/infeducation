@@ -6,23 +6,10 @@
 Icon?
 
 # modules
-frontend_modules/
 node_modules/
-# FE Cache Files
-bower_components/
-public/js/main.js
 
-# dummy stuffs
-logs
-*.log
-manifest.yml
-*.csv
-
-# ignore wiki/ folder
-wiki/
-
-# "public/jsreact/" is our browserfy "target" folder
-public/js/react/*
+# Dist
+public/js/bundle.js
 
 # IDE Cache Files
 .idea/

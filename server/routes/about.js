@@ -1,14 +1,10 @@
 const { renderToString } = require('react-dom/server');
 const { fetchAccessToken } = require(__server+'/lib/wechat')
-const Home = require(__web+'/components/home/Home');
+const About = require(__web+'/components/about/About');
 
 module.exports = function(req, res) {
   fetchAccessToken.then(accessToken => {
-    const markup = renderToString(
-      <Home
-        info={"access_token is "+accessToken}
-      />,
-    );
+    const markup = renderToString(<About />);
     res.render('index', {
       markup: markup,
       data: {}

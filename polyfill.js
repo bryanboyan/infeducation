@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Require this module to polyfill some handy features to js native objects.
  */
