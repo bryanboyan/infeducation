@@ -22,6 +22,7 @@ server.use(express.static(path.join(__dirname, 'public')));
 /**
  * Views
  */
+global.React = require('react');
 server.set('views', path.join(__dirname, 'server/views'));
 server.set('view engine', 'ejs');
 

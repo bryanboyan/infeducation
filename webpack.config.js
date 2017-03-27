@@ -4,7 +4,7 @@ const { resolve } = require('path');
 module.exports = {
   entry: resolve(__dirname, 'web', 'app-client.js'),
   output: {
-    path: resolve(__dirname, 'public', 'js'),
+    path: resolve(__dirname, 'public', 'dist'),
     filename: 'bundle.js',
   },
   module: {
