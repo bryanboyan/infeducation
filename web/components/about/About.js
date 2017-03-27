@@ -4,8 +4,17 @@ const ReactDOM = require('react-dom');
 class About extends React.Component {
 
   componentDidMount() {
-    $(ReactDOM.findDOMNode(this)).fullpage();
+    $(ReactDOM.findDOMNode(this)).fullpage({
+      touchSensitivity: 1,
+      keyboardScrolling: true,
+    });
   }
+
+            // <div
+            //   className="slide"
+            //   key={"slide_"+imageName}>
+            //   {"This is" + imageName}
+            // </div>
 
   render() {
     const imageGroups = [
@@ -14,19 +23,22 @@ class About extends React.Component {
       ['31', '32', '33'],
     ];
     const imageItems = imageGroups.map(
-      imageRow => {
+      (imageRow, rowIdx) => {
         const imageRowItems = imageRow.map(
           imageName => (
             <img
               className="slide"
-              key={"about_"+imageName}
               src={"images/about/" + imageName + '.jpg'}
               style={{width: '100%'}}
             />
           )
         );
         
-        return <div className="section">{imageRowItems}</div>;
+        return (
+          <div className="section" key={"row_"+rowIdx}>
+            {imageRowItems}
+          </div>
+        );
       }
     );
 

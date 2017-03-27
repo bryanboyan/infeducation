@@ -4,9 +4,9 @@ const About = require(__web+'/components/about/About');
 
 module.exports = function(req, res) {
   fetchAccessToken.then(accessToken => {
-    const markup = renderToString(<About />);
+    // const markup = renderToString(<About />);
     res.render('index', {
-      markup: markup,
+      markup: "",
       data: {}
     });
   });
