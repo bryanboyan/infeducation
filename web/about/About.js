@@ -1,7 +1,7 @@
-const React = require('react');
+const { Component } = require('react');
 const ReactDOM = require('react-dom');
 
-class About extends React.Component {
+class About extends Component {
 
   componentDidMount() {
     $(ReactDOM.findDOMNode(this)).fullpage({
@@ -9,12 +9,6 @@ class About extends React.Component {
       keyboardScrolling: true,
     });
   }
-
-            // <div
-            //   className="slide"
-            //   key={"slide_"+imageName}>
-            //   {"This is" + imageName}
-            // </div>
 
   render() {
     const imageGroups = [
@@ -28,6 +22,7 @@ class About extends React.Component {
           imageName => (
             <img
               className="slide"
+              key={"about_" + imageName}
               src={"images/about/" + imageName + '.jpg'}
               style={{width: '100%'}}
             />

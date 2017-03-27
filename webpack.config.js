@@ -2,10 +2,13 @@ const webpack = require('webpack');
 const { resolve } = require('path');
 
 module.exports = {
-  entry: resolve(__dirname, 'web', 'app-client.js'),
+  entry: {
+    home: resolve(__dirname, 'web', 'home', 'index.js'),
+    about: resolve(__dirname, 'web', 'about', 'index.js'),
+  },
   output: {
     path: resolve(__dirname, 'public', 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
   },
   module: {
     rules: [
@@ -15,6 +18,9 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+    }),
+    new webpack.ProvidePlugin({
+      "React": "react",
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.UglifyJsPlugin({
