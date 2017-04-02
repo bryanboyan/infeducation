@@ -1,10 +1,10 @@
 const FullPageImageCard = (props) => {
-  const {bgImage, title1, title2, subtitle1, subtitle2} = props;
+  const {bgImage, title1, title2, subtitle1, subtitle2, className} = props;
   const containerStyle = styles.container;
   containerStyle.backgroundImage = "url("+bgImage+")";
 
   return (
-    <div>
+    <div className={className}>
       <div style={containerStyle}>
         <div style={styles.innerCardContainer}>
           <h2 style={styles.title2}>
@@ -26,7 +26,7 @@ const FullPageImageCard = (props) => {
   );
 }
 
-module.exports = FullPageImageCard;
+export default FullPageImageCard;
 
 const styles = {
   container: {
@@ -43,7 +43,7 @@ const styles = {
     height: '600px',
     width: '300px',
     margin: '60px auto',
-    padding: '350px 100px 40px 20px',
+    padding: '300px 100px 40px 20px',
   },
   title2: {
   },

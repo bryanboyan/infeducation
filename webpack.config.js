@@ -5,6 +5,7 @@ module.exports = {
   entry: {
     home: resolve(__dirname, 'web', 'home', 'index.js'),
     about: resolve(__dirname, 'web', 'about', 'index.js'),
+    polyfill: resolve(__dirname, 'polyfill.js'),
   },
   output: {
     path: resolve(__dirname, 'public', 'dist'),
@@ -12,7 +13,18 @@ module.exports = {
   },
   module: {
     rules: [
-      {test: resolve(__dirname, 'web'), use: 'babel-loader'},
+      {
+        test: /\.js$/,
+        exclude: [/node_modules/],
+        use: [{
+          loader: 'babel-loader',
+          options: {presets: ['es2015', 'stage-2', 'react']}
+        }],
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
     ]
   },
   plugins: [
@@ -21,14 +33,6 @@ module.exports = {
     }),
     new webpack.ProvidePlugin({
       "React": "react",
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: { warnings: false },
-      mangle: true,
-      sourcemap: false,
-      beautify: false,
-      dead_code: true
     })
   ]
 };

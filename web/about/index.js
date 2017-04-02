@@ -1,9 +1,8 @@
-const ReactDOM = require('react-dom');
-const About = require('./About');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import About from './About';
 
-window.onload = () => {
-  ReactDOM.render(
-    <About />,
-    document.getElementById('react-root'),
-  );
-};
+ReactDOM.render(
+  <About />,
+  document.getElementById('react-root')
+);

@@ -1,7 +1,10 @@
-const { Component } = require('react');
-const ReactDOM = require('react-dom');
-const FullPageTitleCard = require('../components/FullPageTitleCard');
-const FullPageImageCard = require('../components/FullPageImageCard');
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import $ from 'jquery';
+import '../modules/fullpageModules.js';
+
+import FullPageTitleCard from '../components/FullPageTitleCard';
+import FullPageImageCard from '../components/FullPageImageCard';
 
 const CARD_TYPE = {
   TITLE: 'title',
@@ -11,14 +14,34 @@ const CARD_TYPE = {
 class About extends Component {
 
   componentDidMount() {
-    $(ReactDOM.findDOMNode(this)).fullpage({
+    $('#fullpage').fullpage({
       touchSensitivity: 1,
       keyboardScrolling: true,
+      onLeave: () => {
+        console.log('fullpage.onLeave');
+      },
+      afterLoad: () => {
+        console.log('fullpage.afterLoad');
+      },
+      afterRender: () => {
+        console.log('fullpage.afterRender');
+      },
+      afterResize: () => {
+        console.log('fullpage.afterResize');
+      },
+      afterResponsive: () => {
+        console.log('fullpage.afterResponsive');
+      },
+      afterSlideLoad: () => {
+        console.log('fullpage.afterSlideLoad');
+      },
+      onSlideLeave: () => {
+        console.log('fullpage.onSlideLeave');
+      },
     });
   }
 
   render() {
-
     const contentRow1 = [
       {
         type: CARD_TYPE.TITLE,
@@ -65,16 +88,6 @@ class About extends Component {
         subtitle2: "成为生活的玩家",
       },
     ];
-
-    // const content = contentRow1[0];
-    // return (
-    //   <FullPageTitleCard
-    //     className="slide"
-    //     title={content.title}
-    //     subtitle={content.subtitle}
-    //     key={'about_' + 0 + '' + 0}
-    //   />
-    // );
     
     const imageItems = [contentRow1, contentRow2].map(
       (contentRow, rowIdx) => {
@@ -107,7 +120,7 @@ class About extends Component {
           });
         
         return (
-          <div className="section" key={"row_"+rowIdx}>
+          <div className="section" key={"row_"+rowIdx} id={"section"+rowIdx}>
             {imageRowItems}
           </div>
         );
@@ -122,4 +135,4 @@ class About extends Component {
   }
 }
 
-module.exports = About;
+export default About;
