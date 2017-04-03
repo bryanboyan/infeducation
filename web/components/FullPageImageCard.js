@@ -43,7 +43,7 @@ const styles = {
     height: '600px',
     width: '300px',
     margin: '60px auto',
-    padding: '300px 100px 40px 20px',
+    padding: '350px 100px 40px 20px',
   },
   title2: {
   },

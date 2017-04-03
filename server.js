@@ -32,6 +32,7 @@ server.set('view engine', 'ejs');
 const routes = require('./server/routes');
 server.get('/', routes.home);
 server.get('/about', routes.about);
+server.get('/classes', routes.classes);
 
 const serverConf = configs.server;
 server.listen(serverConf.port, function () {

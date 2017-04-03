@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import '../modules/fullpageModules.js';
@@ -96,21 +96,16 @@ class About extends Component {
             if (content.type === CARD_TYPE.IMAGE) {
               return (
                 <FullPageImageCard
+                  {...content}
                   className="slide"
-                  bgImage={content.bgImage}
-                  title1={content.title1}
-                  title2={content.title2}
-                  subtitle1={content.subtitle1}
-                  subtitle2={content.subtitle2}
                   key={'about_' + rowIdx + '' + contentIdx}
                 />
               );
             } else if (content.type === CARD_TYPE.TITLE) {
               return (
                 <FullPageTitleCard
+                  {...content}
                   className="slide"
-                  title={content.title}
-                  subtitle={content.subtitle}
                   key={'about_' + rowIdx + '' + contentIdx}
                 />
               );
