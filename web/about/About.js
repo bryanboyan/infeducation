@@ -1,10 +1,10 @@
-import { Component } from 'react';
-import ReactDOM from 'react-dom';
-import $ from 'jquery';
-import '../modules/fullpageModules.js';
+const { Component } = require('react');
+const ReactDOM = require('react-dom');
+const $ = require('jquery');
+require('../modules/fullpageModules.js');
 
-import FullPageTitleCard from '../components/FullPageTitleCard';
-import FullPageImageCard from '../components/FullPageImageCard';
+const FullPageTitleCard = require('../components/FullPageTitleCard');
+const FullPageImageCard = require('../components/FullPageImageCard');
 
 const CARD_TYPE = {
   TITLE: 'title',
@@ -130,4 +130,4 @@ class About extends Component {
   }
 }
 
-export default About;
+module.exports = About;

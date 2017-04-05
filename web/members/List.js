@@ -1,6 +1,6 @@
-import { Component } from 'react';
+const { Component } = require('react');
 
-import SmallListItem from '../components/SmallListItem';
+const SmallListItem = require('../components/SmallListItem');
 
 class List extends Component {
   render() {
@@ -31,7 +31,7 @@ class List extends Component {
     );
   }
 }
-export default List;
+module.exports = List;
 
 const styles = {
   list: {

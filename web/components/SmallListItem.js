@@ -1,4 +1,4 @@
-const SmallListItem = (props) => {
+module.exports = (props) => {
   const {
     thumb,
     name,
@@ -14,9 +14,7 @@ const SmallListItem = (props) => {
       </div>
     </div>
   );
-}
-
-export default SmallListItem;
+};
 
 const styles = {
   item: {

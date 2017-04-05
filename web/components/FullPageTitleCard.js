@@ -1,4 +1,4 @@
-const FullPageTitleCard = (props) => {
+module.exports = (props) => {
   const {title, subtitle, hasMore, className} = props;
 
   return (
@@ -16,9 +16,7 @@ const FullPageTitleCard = (props) => {
       </div>
     </div>
   );
-}
-
-export default FullPageTitleCard;
+};
 
 const styles = {
   container: {

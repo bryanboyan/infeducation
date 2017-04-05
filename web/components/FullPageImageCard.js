@@ -1,4 +1,4 @@
-const FullPageImageCard = (props) => {
+module.exports = (props) => {
   const {bgImage, title1, title2, subtitle1, subtitle2, className} = props;
   const containerStyle = styles.container;
   containerStyle.backgroundImage = "url("+bgImage+")";
@@ -24,9 +24,7 @@ const FullPageImageCard = (props) => {
       </div>
     </div>
   );
-}
-
-export default FullPageImageCard;
+};
 
 const styles = {
   container: {

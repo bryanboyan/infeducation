@@ -1,7 +1,7 @@
-import { subscribe } from '../utils/serverAPI';
-import { Button } from 'react-bootstrap';
+const { subscribe } = require('../utils/serverAPI');
+const { Button } = require('react-bootstrap');
 
-const BigListItem = (props) => {
+module.exports = (props) => {
   const {
     authorThumb,
     authorName,
@@ -35,9 +35,7 @@ const BigListItem = (props) => {
       </div>
     </div>
   );
-}
-
-export default BigListItem;
+};
 
 const styles = {
   item: {

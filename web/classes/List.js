@@ -1,6 +1,6 @@
-import { Component } from 'react';
+const { Component } = require('react');
 
-import BigListItem from '../components/BigListItem';
+const BigListItem = require('../components/BigListItem');
 
 class List extends Component {
   render() {
@@ -35,7 +35,7 @@ class List extends Component {
     );
   }
 }
-export default List;
+module.exports = List;
 
 const styles = {
   list: {
