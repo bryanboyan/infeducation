@@ -15,6 +15,10 @@ v6.9.5
 // Now you can go to localhost:3000
 ```
 
+### Play around
+See all the routes in server.js.
+Better look from mobile environment (you can use chrome to open as mobile)
+
 # 资料、资源
 ## node.js
 我们使用最新的成熟版 v6.9，请到 nodejs.org 官网上搜索关于node的API文档稍微熟悉一下。
