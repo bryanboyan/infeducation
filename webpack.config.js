@@ -6,6 +6,7 @@ module.exports = {
     home: resolve(__dirname, 'web', 'home', 'index.js'),
     about: resolve(__dirname, 'web', 'about', 'index.js'),
     classes: resolve(__dirname, 'web', 'classes', 'index.js'),
+    members: resolve(__dirname, 'web', 'members', 'index.js'),
     polyfill: resolve(__dirname, 'polyfill.js'),
   },
   output: {

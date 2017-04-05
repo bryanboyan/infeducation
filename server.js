@@ -33,6 +33,7 @@ const routes = require('./server/routes');
 server.get('/', routes.home);
 server.get('/about', routes.about);
 server.get('/classes', routes.classes);
+server.get('/members', routes.members);
 
 const serverConf = configs.server;
 server.listen(serverConf.port, function () {
