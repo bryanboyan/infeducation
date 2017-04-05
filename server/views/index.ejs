@@ -6,6 +6,10 @@
   <body>
     <div id="react-root"></div>
 
+    <!-- Main data flow from server to client. -->
+    <!-- Unlike normal html page where "data" and "view" are together in the html, js is packed into -->
+    <!-- dist/ as static methods, where data is passed from server into this pure data. -->
+    <!-- Store into global window and setup to redux is a good solution here. -->
     <script type="text/javascript">
     	const pageData = '<%- pageData %>';
     	try {
@@ -15,6 +19,7 @@
     		console.error(e);
     	}
     </script>
+
     <!-- Dynamic loading react dist which will mount onto react-root -->
     <script type="text/javascript" src=<%- dist %>></script>
   </body>
