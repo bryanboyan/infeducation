@@ -33,6 +33,7 @@ const styles = {
   introductionSection: {
     display: 'inline-block',
     height: 80,
+    width: '75%',
     marginLeft: 10,
   },
   name: {
@@ -43,7 +44,6 @@ const styles = {
     fontWeight: 'bold',
   },
   introduction: {
-    width: '90%',
     marginTop: 8,
     lineHeight: '15px',
     color: '#565252',

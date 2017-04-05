@@ -9,13 +9,13 @@ class List extends Component {
         thumb: '/images/authors/1.jpg',
         name: 'Mr Han',
         id: 1,
-        introduction: 'The IKEA class I. This is the core class to test business sense and talk about IKEA',
+        introduction: 'My name is Mr. Han, I live in Beijing',
       },
       {
         thumb: '/images/authors/2.jpg',
         name: 'Sisley',
         id: 2,
-        introduction: 'The history of wine',
+        introduction: 'My name is Sisley, talk to me about anything!',
       },
     ];
 
