@@ -21,7 +21,7 @@ export default SmallListItem;
 const styles = {
   item: {
     backgroundColor: 'white',
-    margin: '5px 10px 5px',
+    margin: 5,
     padding: 5,
     display: 'flex',
   },
