@@ -6,6 +6,15 @@
   <body>
     <div id="react-root"></div>
 
+    <script type="text/javascript">
+    	const pageData = '<%- pageData %>';
+    	try {
+    		window._pageData = JSON.parse(pageData);
+    	} catch (e) {
+    		console.error('Excpetion happened when parsing pageData: ' + pageData);
+    		console.error(e);
+    	}
+    </script>
     <!-- Dynamic loading react dist which will mount onto react-root -->
     <script type="text/javascript" src=<%- dist %>></script>
   </body>

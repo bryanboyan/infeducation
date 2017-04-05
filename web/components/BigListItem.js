@@ -54,6 +54,7 @@ const styles = {
   descriptionSection: {
     display: 'inline-block',
     height: 80,
+    width: '75%',
     marginLeft: 10,
   },
   authorName: {
@@ -71,7 +72,6 @@ const styles = {
     fontSize: '15px',
   },
   description: {
-    width: 350,
     marginTop: 8,
     lineHeight: '15px',
     fontSize: '12px',

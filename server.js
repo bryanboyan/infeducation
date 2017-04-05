@@ -19,6 +19,21 @@ global.__web = __dirname + '/web';
  */
 server.use(express.static(path.join(__dirname, 'public')));
 
+// Always try to json-stringify pageData
+server.use(function (req, res, next) {
+  const _render = res.render;
+  res.render = function (view, options, fn) {
+    let pageData = _.get(options, 'pageData', {});  // default value {}
+    if (_.isObject(pageData)) {
+      pageData = JSON.stringify(pageData);
+    }
+    options.pageData = pageData;
+
+    _render.call(this, view, options, fn);
+  }
+  next();
+});
+
 /**
  * Views
  */

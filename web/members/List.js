@@ -4,24 +4,12 @@ const SmallListItem = require('../components/SmallListItem');
 
 class List extends Component {
   render() {
-    const list = [
-      {
-        thumb: '/images/authors/1.jpg',
-        name: 'Mr Han',
-        id: 1,
-        introduction: 'My name is Mr. Han, I live in Beijing',
-      },
-      {
-        thumb: '/images/authors/2.jpg',
-        name: 'Sisley',
-        id: 2,
-        introduction: 'My name is Sisley, talk to me about anything!',
-      },
-    ];
+    // TODO setup redux as data flow.
+    const memberList = window._pageData.memberList;
 
     return (
       <div style={styles.list}>
-        {list.map((item, idx) => (
+        {memberList.map((item, idx) => (
           <SmallListItem
             {...item}
             key={"big_list_item_"+idx}
